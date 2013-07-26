@@ -406,7 +406,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #endif //TANTILLUS
 
 // overrides for my Tantillus, this should be disabled
-//#define LAJOS
+#define LAJOS
 #ifdef LAJOS
 	#define Z_MAX_POS 120			// cable Z, without getting too close to my electronics
 	

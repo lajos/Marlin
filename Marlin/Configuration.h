@@ -414,7 +414,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define DEFAULT_MAX_FEEDRATE          {150, 150, 150, 40}
 	#define DEFAULT_MAX_ACCELERATION      {8000,8000,4000,10000}
 
-	#define DEFAULT_ACCELERATION          7000
+	#define DEFAULT_ACCELERATION          4000
 	
 	#define DEFAULT_ZJERK                 10.0
 	

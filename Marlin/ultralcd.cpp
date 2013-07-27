@@ -243,6 +243,7 @@ static void lcd_sdcard_stop()
         enquecommand_P(PSTR(SD_FINISHED_RELEASECOMMAND));
     }
 #if defined(TANTILLUS)
+	setTargetHotend(0,active_extruder);
 	enquecommand_P(PSTR(MOVE_HOME_GCODE));
 #endif
     autotempShutdown();
@@ -271,14 +272,14 @@ static void lcd_main_menu()
 {
     START_MENU();
     MENU_ITEM(back, MSG_WATCH, lcd_status_screen);
-    if (movesplanned() || IS_SD_PRINTING)
+    if (movesplanned()>3 || IS_SD_PRINTING)
     {
         MENU_ITEM(submenu, MSG_TUNE, lcd_tune_menu);
     }else{
         MENU_ITEM(submenu, MSG_PREPARE, lcd_prepare_menu);
     }
     MENU_ITEM(submenu, MSG_CONTROL, lcd_control_menu);
-    if (!(movesplanned() || IS_SD_PRINTING))
+    if (!(movesplanned()>3 || IS_SD_PRINTING))
     {
 		MENU_ITEM(submenu, MSG_CALIBRATE, lcd_calibrate_menu);
 	}

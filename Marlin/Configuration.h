@@ -375,7 +375,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define MIN_FAN_TEMP 50             	// Temperature to turn the fan on at
 	#define MIN_FAN_TIME 45             	// Time in seconds to keep the fan on after temperature drops below MIN_FAN_TEMP
 
-	#define MOVE_HOME_FEEDRATE 6000			// Feed rate for returning the carriage to x=0, y=0 (on sd card print finished, sd menu enter)
+	#define MOVE_HOME_FEEDRATE 2000			// Feed rate for returning the carriage to x=0, y=0 (on sd card print finished, sd menu enter)
 	
 //	#define NO_PREHEAT_PLA_MENUITEM     	// removes PLA pre-heat option from LCD menu
 	#define NO_PREHEAT_ABS_MENUITEM     	// removes ABS pre-heat option from LCD menu
@@ -406,7 +406,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #endif //TANTILLUS
 
 // overrides for my Tantillus, this should be disabled
-//#define LAJOS
+#define LAJOS
 #ifdef LAJOS
 	#define Z_MAX_POS 120			// cable Z, without getting too close to my electronics
 	
@@ -427,14 +427,14 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define LCD_PURGE_FEEDRATE 500		
 	#define LCD_RETRACT_FEEDRATE 500		
 	
-//	#define PIDTEMP
+	#define PIDTEMP
 	#define PID_FUNCTIONAL_RANGE 10
 	#define PID_INTEGRAL_DRIVE_MAX 255
 	#define K1 0.95
 	#define PID_dT ((16.0 * 8.0)/(F_CPU / 64.0 / 256.0))
-    #define  DEFAULT_Kp 34.00
-    #define  DEFAULT_Ki 2.77
-    #define  DEFAULT_Kd 104.17
+  #define  DEFAULT_Kp 34.00
+  #define  DEFAULT_Ki 2.77
+  #define  DEFAULT_Kd 104.17
 	
 	#define ULTRA_LCD
 	#define SDSUPPORT

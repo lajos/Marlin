@@ -156,13 +156,22 @@ extern volatile uint16_t buttons;  //an extended version of the last checked but
   #define LCD_I2C_PIN_D6  6
   #define LCD_I2C_PIN_D7  7
 
+  // #define LCD_I2C_PIN_BL  7
+  // #define LCD_I2C_PIN_EN  6
+  // #define LCD_I2C_PIN_RW  5
+  // #define LCD_I2C_PIN_RS  4
+  // #define LCD_I2C_PIN_D4  0
+  // #define LCD_I2C_PIN_D5  1
+  // #define LCD_I2C_PIN_D6  2
+  // #define LCD_I2C_PIN_D7  3
+
   #include <Wire.h>
   #include <LCD.h>
   #include <LiquidCrystal_I2C.h>
   #define LCD_CLASS LiquidCrystal_I2C
   
   #ifdef BASIC_LCD
-    LCD_CLASS lcd(LCD_I2C_ADDRESS);
+    LCD_CLASS lcd(LCD_I2C_ADDRESS, LCD_WIDTH, LCD_HEIGHT);
   #elif
     LCD_CLASS lcd(LCD_I2C_ADDRESS,LCD_I2C_PIN_EN,LCD_I2C_PIN_RW,LCD_I2C_PIN_RS,LCD_I2C_PIN_D4,LCD_I2C_PIN_D5,LCD_I2C_PIN_D6,LCD_I2C_PIN_D7);
   #endif  //BASIC_LCD

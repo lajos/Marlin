@@ -427,7 +427,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define LCD_PURGE_FEEDRATE 500		
 	#define LCD_RETRACT_FEEDRATE 500		
 	
-	#define PIDTEMP
+	//#define PIDTEMP
 	#define PID_FUNCTIONAL_RANGE 10
 	#define PID_INTEGRAL_DRIVE_MAX 255
 	#define K1 0.95

@@ -432,9 +432,9 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define PID_INTEGRAL_DRIVE_MAX 255
 	#define K1 0.95
 	#define PID_dT ((16.0 * 8.0)/(F_CPU / 64.0 / 256.0))
-  #define  DEFAULT_Kp 34.00
-  #define  DEFAULT_Ki 2.77
-  #define  DEFAULT_Kd 104.17
+  #define DEFAULT_Kp 34.00
+  #define DEFAULT_Ki 2.77
+  #define DEFAULT_Kd 104.17
 	
 	#define ULTRA_LCD
 	#define SDSUPPORT

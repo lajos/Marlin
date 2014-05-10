@@ -410,7 +410,8 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 #ifdef LAJOS
 	#define Z_MAX_POS 120			// cable Z, without getting too close to my electronics
 	
-	#define DEFAULT_AXIS_STEPS_PER_UNIT   {247,247,205,505}				// 1/32 microstep for x,y,z, and probably a bit thicker fishing line
+	#define DEFAULT_AXIS_STEPS_PER_UNIT   {123, 123, 102, 480}		  // 1/16 microstep for x,y,z
+  //#define DEFAULT_AXIS_STEPS_PER_UNIT   {247,247,205,505}       // 1/32 microstep for x,y,z
 	#define DEFAULT_MAX_FEEDRATE          {150, 150, 150, 40}
 	#define DEFAULT_MAX_ACCELERATION      {8000,8000,4000,10000}
 

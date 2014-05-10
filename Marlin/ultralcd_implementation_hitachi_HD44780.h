@@ -325,7 +325,11 @@ static void lcd_implementation_init()
     lcd.setMCPType(LTI_TYPE_MCP23008);
     lcd.begin(LCD_WIDTH, LCD_HEIGHT);
 
-#elif defined(LCD_I2C_TYPE_PCA8574)
+#elif defined(LCD_I2C_TYPE_PCF8575)
+      lcd.init();
+      lcd.backlight();
+
+#elif defined(LCD_I2C_TYPE_PCA8575)
       lcd.init();
       lcd.backlight();
     

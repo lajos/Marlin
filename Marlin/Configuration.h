@@ -414,7 +414,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define DEFAULT_MAX_FEEDRATE          {150, 150, 150, 40}
 	#define DEFAULT_MAX_ACCELERATION      {8000,8000,4000,10000}
 
-	#define DEFAULT_ACCELERATION          4000
+	#define DEFAULT_ACCELERATION          6000
 	
 	#define DEFAULT_ZJERK                 10.0
 	
@@ -427,7 +427,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 	#define LCD_PURGE_FEEDRATE 500		
 	#define LCD_RETRACT_FEEDRATE 500		
 	
-	//#define PIDTEMP
+	#define PIDTEMP
 	#define PID_FUNCTIONAL_RANGE 10
 	#define PID_INTEGRAL_DRIVE_MAX 255
 	#define K1 0.95

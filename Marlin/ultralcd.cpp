@@ -140,10 +140,6 @@ bool lcd_oldcardstatus;
 #endif
 #endif//ULTIPANEL
 
-#if defined(TANTILLUS)
-#define MOVE_HOME_GCODE "G1 F" STRINGIFY(MOVE_HOME_FEEDRATE) " X0 Y0"
-#endif
-
 menuFunc_t currentMenu = lcd_status_screen; /* function pointer to the currently active menu */
 uint32_t lcd_next_update_millis;
 uint8_t lcd_status_update_delay;
@@ -244,7 +240,6 @@ static void lcd_sdcard_stop()
     }
 #if defined(TANTILLUS)
 	setTargetHotend(0,active_extruder);
-	enquecommand_P(PSTR(MOVE_HOME_GCODE));
 #endif
     autotempShutdown();
 #endif
@@ -423,9 +418,6 @@ static void lcd_auto_home()
 		lcd_return_to_status();
 		return;
 	}
-#endif
-#ifdef TANTILLUS
-	enquecommand_P(PSTR(MOVE_HOME_GCODE));
 #endif
 	enquecommand_P((PSTR("G28")));
 	lcd_return_to_status();
@@ -821,9 +813,6 @@ void lcd_sdcard_menu()
 {
 #ifdef SDSUPPORT
     uint16_t fileCnt = card.getnrfilenames();
-#if defined(TANTILLUS)
-	enquecommand_P(PSTR(MOVE_HOME_GCODE));
-#endif
     START_MENU();
     MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
     card.getWorkDirName();

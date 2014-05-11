@@ -2223,7 +2223,7 @@ unsigned long lastMotorCheck = 0;
 
 void controllerFan()
 {
-  if ((millis() - lastMotorCheck) >= 2500) //Not a time critical function, so we only check every 2500ms
+  if ((millis() - lastMotorCheck) >= 1000) //Not a time critical function, so we only check every 1000ms
   {
     lastMotorCheck = millis();
 

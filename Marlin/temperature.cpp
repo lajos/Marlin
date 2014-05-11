@@ -197,11 +197,10 @@ void PID_autotune(float temp, int extruder, int ncycles)
      bias = d = (PID_MAX)/2;
   }
 
-
-
-
  for(;;) {
-
+#ifdef TANTILLUS
+    fanSpeedSoftPwm = 255;
+#endif
     if(temp_meas_ready == true) { // temp sample ready
       updateTemperaturesFromRawValues();
 
